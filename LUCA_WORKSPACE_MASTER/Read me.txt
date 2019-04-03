@@ -1,0 +1,4 @@
+Folders Discription:
+HEX FILES: use to contain project hex files.
+LUCA_Datasheets: use to store datasheets related to projects.
+tirtos_lab1_cc2650launchxl: TI RTOS lab1 based project nlink code is generated based on this project.

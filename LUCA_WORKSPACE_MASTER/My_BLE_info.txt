@@ -1,0 +1,9 @@
+Generic Access Profile (GAP)
+
+Advertiser
+Connection Interval-->  minimum value of 6 (7.5 ms) to a maximum of 3200 (4.0 s).
+Slave Latency
+Supervision Time-out-->This time-out is the maximum amount of time between two successful connection events. If this time passes without a successful connection event, the device terminates the connection and returns to an unconnected state. This parameter value is represented in units of 10 ms. The supervision time-out value can range from a minimum of 10 (100 ms) to 3200 (32.0 s). The time-out must be larger than the effective connection interval
+Discoverable mode: GAP_ADTYPE_FLAGS_GENERAL(not limited)
+Advertising Interavl: 160 --> 100ms 625uSec per unit
+GAP Role as peripheral.--> The advertiser is connectable and operates as a slave in a single link-layer connection

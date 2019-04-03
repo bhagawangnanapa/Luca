@@ -1,0 +1,827 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+	
+
+
+ 		
+
+
+
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<title>1 - RR-15 Renewal Reminder</title>
+<style>
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('/ui/fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),  url('/ui/fonts/Montserrat-SemiBold.woff') format('woff'), url('/ui/fonts/Montserrat-SemiBold.ttf')  format('truetype'), url('/ui/fonts/Montserrat-SemiBold.svg#Montserrat-SemiBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('/ui/fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),  url('/ui/fonts/Montserrat-Medium.woff') format('woff'), url('/ui/fonts/Montserrat-Medium.ttf')  format('truetype'), url('/ui/fonts/Montserrat-Medium.svg#Montserrat-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.light_box_shadow_box_container_heading{font-family: 'Montserrat-Medium'; }
+</style>
+
+<style>
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin:0; padding:0; font-family: 'CenturyGothic', sans-serif, Tahoma, Helvetica, Arial;
+}
+* {
+	outline:none;
+	border:none;
+}
+a {text-decoration:none;}
+div, h1, h2, h3, p {
+	margin:0;
+	padding:0;
+}
+.main {
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.7);
+}
+.popup-box {
+	background:#dddede;
+	position:absolute;
+	/*top:50%;*/
+	left:0;
+	right:0;
+	padding:0;
+	box-sizing:border-box;
+	max-width:1200px;
+	width:100%;
+	bottom:-6px;
+	/*border: 1px solid #ccc;*/
+	box-shadow: 0px 0px 13px 2px #777;
+	/*display: table;*/
+	margin: 0 auto;
+	background-image: url('images/bottom_bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom right; 
+}
+.close-button {
+	position:absolute;
+	top:-8px;
+	right:-8px;
+	cursor:pointer;
+}
+
+.head-block {
+	display:block;
+	text-align:center;
+	box-sizing:border-box;
+	display: table-cell;
+	vertical-align: top;
+	width:10%;
+}
+.client_logo {
+	font-size:22px;
+	line-height:23px;
+	color:#ed1c24;
+	display:table-cell;
+	width:110px;
+	vertical-align:top;
+	padding: 0 10px;
+	text-align:center;
+	max-width:10%;
+	position:relative;
+	top: -5px;
+	vertical-align: middle;
+}
+.inner-block {
+	width:100%;
+	padding:0 25px 10px 0;
+	box-sizing:border-box;
+	float:left;
+	display:table-cell;
+}
+.header_title{min-height:15px;}
+.header_title h1 {
+	font-size:16px;
+	line-height:26px;
+	color:#fff;
+	vertical-align:middle;
+	padding: 2px 30px;
+	text-align:center;
+	font-weight:normal;
+	display: table;
+	margin: 0 auto;
+	background-color:#283d7a;
+	margin-top:2px;
+	margin-bottom:3px;
+	position: relative;
+	letter-spacing: 3px;
+}
+.header_title h1:before {width: 40px; height:30px;
+    content: " ";
+    background-image: url(images/header_bg.png);
+    position: absolute;
+    left: -32px; top: 0;}
+.header_title h1:after {width: 40px;  height:30px;
+    content: " ";
+    background-image: url(images/header_bg.png);
+    position: absolute;
+right: -28px; top: 0;
+background-position: -42px 0;}
+.inner-block .title {
+	white-space: nowrap;
+	color:#000;
+	font-family: "CenturyGothic-Bold", sans-serif, Tahoma, Helvetica, Arial;
+	/*font-style: italic;*/
+	font-weight:bold;
+	text-align:left;
+}
+.inner-block .desc {
+	font-size:16px;
+	color:#000;
+	line-height:20px;
+	display:table-cell;
+	padding:0 15px;
+	vertical-align:middle;
+	text-align:left;
+}
+.last-block{display:table-cell; vertical-align:middle; width:150px; vertical-align: middle; text-align: center;}
+a{text-decoration: none;}
+
+.button1 {
+	display:inline-block;
+	padding:5px 15px 6px 15px;
+	font-size:17px;
+	color:#fff;
+	text-align:center;
+	text-transform:uppercase;
+	text-decoration:none;
+	background:#a01104;
+	border-radius: 5px;
+	cursor:pointer;
+}
+p.small {
+	font-size:12px;
+	padding:0;
+	display: inline-flex;
+width: auto;
+line-height: 20px;
+}
+
+p.small input{padding: 2px 0 10px 0; margin:1px 6px; float:left;}
+.nowrap {
+	white-space: nowrap;
+	color:#000;
+	font-family: "CenturyGothic-Bold", sans-serif, Tahoma, Helvetica, Arial;
+	font-weight: bold;
+}
+
+ 
+  @media screen and (max-width:1000px) {
+	 .head-block{width: 180px;}
+	 .inner-block h1 {padding: 2px 15px;}
+  }
+  @media screen and (max-width:915px) {
+	  .head-block {width: 160px;}
+  }
+  @media screen and (max-width:800px) {
+	 .inner-block .desc {width: auto;}
+	 p.small {padding:5px 0; font-size: 10px;}
+ }
+ 
+ .cnfbutton
+{
+	display:inline-block;
+	padding:5px 15px 6px 15px;
+	font-size:17px;
+	color:#fff;
+	text-align:center;
+	text-transform:uppercase;
+	text-decoration:none;
+	background:#a01104;
+	border-radius: 5px;
+	cursor:pointer;
+	margin-right:5px;
+}
+
+
+
+.check_option {
+    display: inline-block;
+    position: relative;
+    padding-left:15px;
+    font-size: 12px;
+	color:#444;
+}
+
+/* Hide the browser's default checkbox */
+.check_option input {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 9px;
+    width: 9px;
+    background-color: #fff;	
+    cursor: pointer;
+	border:1px solid #999;
+}
+
+/* On mouse-over, add a grey background color */
+.check_option:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check_option input:checked ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.msgbox{margin:10px;text-align: center;}
+.opt_confirm_div{padding:5px; background:#273253;}
+.bottom_block p{color: #fff; display: inline-block; padding-left: 15px; font-size: 17px; vertical-align: middle; max-width: 180px; overflow: hidden; white-space: nowrap;  }
+
+	.opt_center {text-align:center;}
+
+	.bottom_block a{
+	display: inline-block;
+	padding: 5px 6px;
+	font-size: 13px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #a01104;
+	border-radius: 5px;
+	margin: 0 5px 0 0;
+	font-weight: bold;
+
+	}
+
+	.success_mesg {position:relative;}
+	.success_mesg1 {display: table; margin: 0 auto;}
+	.success_mesg1 p{padding:0; display:table-cell; /*height:65px;*/}
+    .opt_sec {text-align:center; padding:0 0 10px 15px;}
+	
+	.confrim_mask {background-color:transparent; left:0; top:0; position:absolute; width:100%; height:100%;  border:0;display:none !important; z-index:1;}
+	.confirm_option {display:table-cell}
+
+.ly-block {
+    width: 75%;
+    padding:5px 15px;
+    box-sizing: border-box;
+    /*float: left;*/
+    display: table-cell;
+    text-align: center;
+
+}
+.ly-block ul{padding:0; margin:0;}
+.ly-block li{list-style:none; float:left; margin:4px 3px;}
+
+.ly-block .title {
+	font-size:18px;
+	color:#000;
+	font-family: "CenturyGothic-Bold", sans-serif, Tahoma, Helvetica, Arial;
+	 font-weight: normal;
+	 padding-bottom:5px;
+	 text-align:left;
+}
+.ly-block .desc {
+	font-size:15px;
+	color:#444444;
+	line-height:23px;
+	padding:0 0 3px 0;
+	text-align:left;
+}
+
+.ly-block .success {display:table-cell; vertical-align:middle; font-size:15px; color:#444444;line-height:23px;	padding:0 0 3px 0; text-align:left; padding: 0 15px;}
+
+.opt_confirm {position:absolute; top:20%; left:25%; right:25%; width:50%; background:#fff; z-index:101;  box-shadow: 0px 0px 7px 2px #aaa;}
+
+#ctitle{display:none}
+#msgcnt {display: table-cell; width: 68%; text-align: center; vertical-align: middle;}
+.confirm_block {display: table-cell; vertical-align: middle;}
+
+.bk_btn{
+	display:inline-block;
+	padding:5px 15px 6px 15px;
+	font-size:17px;
+	color:#fff;
+	text-align:center;
+	text-transform:uppercase;
+	text-decoration:none;
+	background:#a01104;
+	border-radius: 5px;
+	cursor:pointer;
+}
+#id_main_div{overflow:hidden;}
+</style>
+<style>	
+	a:active, a:link, a:visited, a:hover, a{color:#fff;}
+	.mesgtxt-f15 {font-size:15px; line-height:24px; color:#555;}
+	.text-nowrap {white-space: normal;}
+	.txt-nor-weight { color:#222;}
+
+	
+
+	
+	/* The radio */
+.radio_btn {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radio_label{font-size: 15px; font-weight:normal! important; color:#444;}
+
+
+/* Hide the browser's default radio button */
+.radio_btn input{position: absolute; opacity: 0; cursor: pointer;}
+
+/* Create a custom radio button */
+.radio_checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    border: 1px solid #888;
+}
+.radio_checkmark{border-radius: 50%;}
+
+/* On mouse-over, add a grey background color */
+.radio_btn:hover input ~ .radio_checkmark{background-color: #ccc;}
+
+/* When the radio button is checked, add a blue background */
+.radio_btn input:checked ~ .radio_checkmark{background-color: #007fc1;}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio_checkmark:after{content: ""; position: absolute; display: none;}
+
+/* Show the indicator (dot/circle) when checked */
+.radio_btn input:checked ~ .radio_checkmark:after{display: block;}
+
+/* Style the indicator (dot/circle) */
+.radio_btn .radio_checkmark:after {
+ 	top: 7px;
+	left: 7px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	/*background: white;*/
+}
+
+
+
+
+</style>
+ 	
+<script>
+
+ var refer_url ='http://localhost:55432/';
+ var parent_obj=window.top;
+ 
+if(refer_url=="http://www.airtel.in/dot/")
+	parent_obj=window.parent;
+
+var flag=true;
+
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if (pair[0] == variable) {
+      return pair[1];
+    }
+  } 
+ }
+ 
+ function open_popup(e)
+ { 
+	 var o=900,t=700;
+	 try{screen.width>0&&(o=Math.round(.9*screen.width),t=Math.round(.73*screen.height))}catch(n){};
+	 var i="",r=screen.width/2-o/2,a=screen.height/2-t/2;
+	 window.open(e,i,"toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=no, copyhistory=no, width="+o+", height="+t+", top="+a+", left="+r);
+ } 
+ 
+ function mtrck()
+ {  
+ 
+		var dynamic_script = document.createElement( 'script' );		
+		dynamic_script.setAttribute( 'src', 'http://hy1.m4dc.com/i/mtrck.jsp?m=1&s='+getQueryVariable("s")+'&d='+getQueryVariable("m") +'&dsip=60.243.166.56&dsid=395845&DCAS=DCAS-HY-HYD' );
+		
+		var body_obj = document.getElementsByTagName('body')[0];
+		body_obj.appendChild( dynamic_script );
+		
+		//document.getElementById('trckframe').src='http://hy1.m4dc.com/i/mtrck.jsp?m=1&s='+getQueryVariable("s")+'&d='+getQueryVariable("m") +'&dsip=60.243.166.56&dsid=395845&DCAS=DCAS-HY-HYD';	
+ }
+ 
+ function ctrck(e)
+ { 
+
+	var  event_target=e.target ;
+	var  page_ttile =document.title;	
+	if(typeof event_target == 'undefined'){ event_target='';}
+	if(typeof page_ttile == 'undefined'){ page_ttile='';}	
+	gtag_trackEvent(page_ttile,'Button-Click',event_target,1);
+	
+	if(typeof msg_log_pkid != 'undefined')				
+		document.getElementById('ctrckframe').src='http://hy1.m4dc.com/i/ctrck.jsp?m=1&s='+getQueryVariable("s")+'&d='+getQueryVariable("m") +"&pkid="+msg_log_pkid+'&dsip=60.243.166.56&dsid=395845&DCAS=DCAS-HY-HYD';
+	else
+		document.getElementById('ctrckframe').src='http://hy1.m4dc.com/i/ctrck.jsp?m=1&s='+getQueryVariable("s")+'&d='+getQueryVariable("m") +"&pkid="+0 +'&dsip=60.243.166.56&dsid=395845&DCAS=DCAS-HY-HYD';
+
+ }
+ 
+ function ctrck1()
+ { 
+	if(typeof msg_log_pkid != 'undefined')				
+		document.getElementById('ctrckframe').src='http://hy1.m4dc.com/i/ctrck.jsp?m=1&s='+getQueryVariable("s")+'&d='+getQueryVariable("m")+"&pkid="+msg_log_pkid+'&dsip=60.243.166.56&dsid=395845&DCAS=DCAS-HY-HYD';
+	else	
+		document.getElementById('ctrckframe').src='http://hy1.m4dc.com/i/ctrck.jsp?m=1&s='+getQueryVariable("s")+'&d='+getQueryVariable("m")+"&pkid="+0 +'&dsip=60.243.166.56&dsid=395845&DCAS=DCAS-HY-HYD';
+ }
+ 
+ function UIclose()
+ {
+	 document.getElementById('trckframe').src='http://hy1.m4dc.com/track/xclick?m=1&s='+getQueryVariable("s")+'&d='+getQueryVariable("m")+'&dsip=60.243.166.56&dsid=395845&DCAS=DCAS-HY-HYD';
+	 
+	 parent_obj.postMessage('close','http://'+getQueryVariable('d'));
+	 var  page_ttile =document.title;	 
+	 if(typeof page_ttile == 'undefined'){ page_ttile='';}		 
+	 gtag_trackEvent(page_ttile,'X-Button-Click','Clicked',1);			 
+ }
+ 
+ function UIWinclose()
+ {
+	parent_obj.postMessage('close','http://'+getQueryVariable('d'));
+ }
+ function leve(e)
+ {
+	if (!e) 
+	{e = window.event;}
+
+	var target = e.target || e.srcElement;
+	
+	if(target.src!='about:blank')
+		UIWinclose();
+ }
+ 
+ function optout()
+ {
+	document.getElementById('trckframe').src='http://hy1.m4dc.com/ot.jsp?d='+getQueryVariable("m")+"&s="+document.getElementById('chk_opt').checked +'&dsip=60.243.166.56&dsid=395845&DCAS=DCAS-HY-HYD';	 
+	
+	return true;
+ }
+ 
+
+ 
+function checkheight(height_param)
+{
+	
+	var ahd=0;
+	var dhd=h;
+	
+	if(document.getElementById('headb'))
+	{
+		ahd+=document.getElementById('headb').offsetHeight;
+		dhd-=document.getElementById('headb').offsetHeight;
+	}
+
+	if(document.getElementById('id_sec_div'))
+	{
+		ahd+=document.getElementById('id_sec_div').offsetHeight;
+		dhd-=document.getElementById('id_sec_div').offsetHeight;
+	}
+
+	if(document.getElementById('id_third_div'))
+	{
+		ahd+=document.getElementById('id_third_div').offsetHeight;
+		dhd-=document.getElementById('id_third_div').offsetHeight;
+		
+	}	
+	
+	if(document.getElementById('bot_div'))
+	{
+		ahd+=document.getElementById('bot_div').offsetHeight;
+		dhd-=document.getElementById('bot_div').offsetHeight;
+		
+	}	 
+	
+	 if(document.getElementById('msgcnt'))
+	 ahd+=document.getElementById('msgcnt').offsetHeight;
+ 
+ //if(document.getElementById('msgcnt').offsetHeight>height_param)
+
+ if(ahd>0 && ahd>h && dhd>0)	 
+ {
+	 if(document.getElementById('msgcnt'))
+	 {
+		 height_param=dhd;
+     }
+	  	 document.getElementById('msgcnt').style.height= (height_param+1)+"px";
+	 
+	 if(getQueryVariable("dt")!=2)
+	 {
+		document.getElementById('msgcnt').style.overflow="hidden";
+	 
+		if (document.getElementById('msgcnt').addEventListener) {
+		document.getElementById('msgcnt').addEventListener('mouseover', setOverflow, false);
+		} else { // IE
+		document.getElementById('msgcnt').attachEvent('onmouseover', setOverflow);
+		}  
+		
+		if (document.getElementById('msgcnt').addEventListener) {
+		document.getElementById('msgcnt').addEventListener('mouseout', hideOverflow, false);
+		} else { // IE
+		document.getElementById('msgcnt').attachEvent('onmouseout', hideOverflow);
+		} 
+	 }
+	 else
+		 document.getElementById('msgcnt').style.overflow="auto";
+		 
+ }
+ 
+} 
+
+function checkOverflow()
+{
+	 if(getQueryVariable("dt")!=2)
+	 {
+		document.getElementById('cnt').style.overflow="hidden";
+	 
+		if (document.getElementById('cnt').addEventListener) {
+		document.getElementById('cnt').addEventListener('mouseover', setOverflow, false);
+		} else { // IE
+		document.getElementById('cnt').attachEvent('onmouseover', setOverflow);
+		}  
+		
+		if (document.getElementById('cnt').addEventListener) {
+		document.getElementById('cnt').addEventListener('mouseout', hideOverflow, false);
+		} else { // IE
+		document.getElementById('cnt').attachEvent('onmouseout', hideOverflow);
+		} 
+		
+		
+		if(document.getElementById("inner_confirm"))
+        {			
+			document.getElementById("inner_confirm").style.overflow="hidden";
+			
+			if (document.getElementById('inner_confirm').addEventListener) {
+			document.getElementById('inner_confirm').addEventListener('mouseover', setInnerOverflow, false);
+			} else { // IE
+			document.getElementById('inner_confirm').attachEvent('onmouseover', setInnerOverflow);
+			}  
+
+			if (document.getElementById('inner_confirm').addEventListener) {
+			document.getElementById('inner_confirm').addEventListener('mouseout', hideInnerOverflow, false);
+			} else { // IE
+			document.getElementById('inner_confirm').attachEvent('onmouseout', hideInnerOverflow);
+			} 
+		}	
+		
+		if(document.getElementById("inner_sucess"))
+        {			
+			document.getElementById("inner_sucess").style.overflow="hidden";
+			
+			if (document.getElementById('inner_sucess').addEventListener) {
+			document.getElementById('inner_sucess').addEventListener('mouseover', setSuccessOverflow, false);
+			} else { // IE
+			document.getElementById('inner_sucess').attachEvent('onmouseover', setSuccessOverflow);
+			}  
+
+			if (document.getElementById('inner_sucess').addEventListener) {
+			document.getElementById('inner_sucess').addEventListener('mouseout', hideSuccessOverflow, false);
+			} else { // IE
+			document.getElementById('inner_sucess').attachEvent('onmouseout', hideSuccessOverflow);
+			} 
+		}
+		
+		
+	 }
+	 else
+	 {
+		 document.getElementById('cnt').style.overflow="auto";
+		 
+		 if(document.getElementById("inner_confirm"))
+			 document.getElementById('inner_confirm').style.overflow="auto";
+		 
+		 if(document.getElementById("inner_sucess"))
+			 document.getElementById('inner_sucess').style.overflow="auto";
+	 }	 
+}
+
+function hideInnerOverflow()
+{	
+	document.getElementById('inner_confirm').style.overflow="hidden"; 
+}
+
+function setInnerOverflow()
+{		
+	document.getElementById('inner_confirm').style.overflowX="hidden"; 
+	document.getElementById('inner_confirm').style.overflowY="auto"; 
+}
+
+
+function hideSuccessOverflow()
+{	
+	document.getElementById('inner_sucess').style.overflow="hidden"; 
+}
+
+function setSuccessOverflow()
+{	
+	document.getElementById('inner_sucess').style.overflowX="hidden"; 
+	document.getElementById('inner_sucess').style.overflowY="auto"; 
+	
+}
+
+
+
+
+function hideOverflow()
+{	
+	document.getElementById('cnt').style.overflow="hidden"; 
+}
+
+function setOverflow()
+{	
+	document.getElementById('cnt').style.overflowX="hidden"; 
+	document.getElementById('cnt').style.overflowY="auto"; 
+
+}
+
+function setheight(height_param)
+{
+	 
+ if(document.getElementById('msgcnt').offsetHeight>height_param)
+ {
+	 parent_obj.postMessage('setHeight_'+(document.getElementById('msgcnt').offsetHeight+150),'http://'+getQueryVariable('d')); 
+ }
+
+
+}
+
+function vertiAlign(id)
+{
+	if(document.getElementById(id))
+	{ 
+		document.getElementById(id).style.top=((h/2)-(document.getElementById(id).offsetHeight/2))+"px";
+	}
+	 
+} 
+
+
+var w=950,h=170; 
+var i="",a=screen.width/2-w/2,r=screen.height/2-h/2;
+
+parent_obj.postMessage('ifrsize_-1_0px_100%_'+h+"px_100%_"+h+"px_"+r+"",'http://'+getQueryVariable('d'));
+var msg_max_height=100;
+
+var confirm_option="table-cell";
+var msg_cnt="table-cell";
+var input_class="radio_checkmark";
+var confirm_success='table-cell';
+</script>
+
+</head>
+ 
+
+ 
+<body onload="checkOverflow();">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119042418-6"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-119042418-6');
+  
+	function gtag_trackEvent(evnt_cat, evnt_act, evnt_lbl, evnt_val) {
+		if (evnt_cat == '' || typeof evnt_cat == 'undefined') {	evnt_cat = 'na'; }
+		if (evnt_act == '' || typeof evnt_act == 'undefined') {	evnt_act = 'na'; }
+		if (evnt_lbl == '' || typeof evnt_lbl == 'undefined'||evnt_lbl==null) {	evnt_lbl = 'na'; }
+		if (evnt_val == '' || typeof evnt_val == 'undefined'||evnt_val==null) {	evnt_val = 1; }
+
+		gtag('event', evnt_act, {
+		  'event_category': evnt_cat,
+		  'event_label': evnt_lbl,
+		  'value': evnt_val
+		});
+	}  
+</script>
+
+
+<div class="main">
+
+	<div class="popup-box" style="max-width:950px">
+	
+
+<div class="close-button"><img src="/ui/images/close-btn.png"  id='imgr' border="0" style="cursor:pointer" onclick="UIclose();"/></div>
+<div id='id_main_div'>
+
+	
+			<a href="https://isp.hathway.net:7404/selfcare_beta/index.php?r=qp/enterdetails&redirect_account_no=1160144339" target="_blank" onclick="ctrck(event);" style="display:table; width:100%;">
+    
+	
+		<div class="header_title">	<h1>Renewal Reminder</h1></div>
+
+<div class="inner-block">
+
+	
+		<div class="client_logo"><img src="images/logo_b.png" /></div>
+		
+	
+	
+<div id="msgcnt" style="display:table-cell;" > <div id="cnt" style="max-height:100px;"> <style>
+.inner-block
+{
+    margin-bottom: 10px; !important;
+    margin-top: 5px; !important;
+    padding: 0 40px 10px 0 !important;
+}
+.last-block{ width: 14% !important;}
+.client_logo img{ width: 130px; !important;}
+.client_logo{ padding: 0 3px; !important;}
+.header_title h1 { margin-top: 0px !important;}
+#msgcnt{width:79% !important}
+</style>
+
+<div class='desc'><span class='title'>Dear Customer,</span> Your  Account  <span class='nowrap'>1160144339</span> is due for renewal on <span class='nowrap'>09-March</span>. Please pay <span class='nowrap'>Rs. 1413.64</span> to enjoy uninterrupted services. Pls. ignore if paid.</div> </div>  </div>
+
+
+
+
+
+
+	
+
+	
+			<div class="last-block" id="cbutton">
+	
+	<div class="button1">Pay Now</div>
+	</div>
+
+
+
+</div>
+
+	</a>
+
+</div>
+
+</div>
+
+</div>
+
+<iframe src="" class="iifr" id="trckframe" scrolling="no" width="100%" height="0px" frameborder="0"></iframe> 
+<iframe src="about:blank" class="iifr" id="ctrckframe" scrolling="no" width="100%" height="0px" frameborder="0" onload="leve(event);"></iframe> 
+
+<script>mtrck();
+
+
+</script>
+
+</body>
+</html>

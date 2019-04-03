@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<project name="Accelerometer AUTOMATIC INCR SUBB ADDRS" version="2.2.0.569">
+    <desc><![CDATA[]]></desc>
+    <pattr name="Apply default power mode">0</pattr>
+    <pattr name="Board">None</pattr>
+    <pattr name="Chip name">CC2650</pattr>
+    <pattr name="Chip package">QFN32 5x5 RHB</pattr>
+    <pattr name="Chip revision">-</pattr>
+    <pattr name="Clock in active mode">0</pattr>
+    <pattr name="Code prefix"></pattr>
+    <pattr name="Default power mode">0</pattr>
+    <pattr name="Operating system">TI-RTOS</pattr>
+    <pattr name="Output directory">C:/Users/smartserver/Desktop/code</pattr>
+    <pattr name="RTC tick interval (16.16 format)">2000</pattr>
+    <pattr name="Run-time logging UART RX pin"></pattr>
+    <pattr name="Run-time logging UART TX pin"></pattr>
+    <task name="I2C">
+        <desc><![CDATA[MEMS digital output motion sensor:
+ultra-low-power high-performance 3-axis "femto" accelerometer(LIS2DE12) with 8bit registers.]]></desc>
+        <tattr name="ACC_I2C_ADDR_R" type="hex" content="const" scope="task" min="0000" max="ffff">0033</tattr>
+        <tattr name="ACC_I2C_ADDR_W" type="hex" content="const" scope="task" min="0000" max="ffff">0032</tattr>
+        <tattr name="ACT_DUR" type="hex" content="const" scope="task" min="0000" max="ffff">003f</tattr>
+        <tattr name="ACT_THS" type="hex" content="const" scope="task" min="0000" max="ffff">003e</tattr>
+        <tattr name="CLICK_CFG" type="hex" content="const" scope="task" min="0000" max="ffff">0038</tattr>
+        <tattr name="CLICK_SRC" type="hex" content="const" scope="task" min="0000" max="ffff">0039</tattr>
+        <tattr name="CLICK_THS" type="hex" content="const" scope="task" min="0000" max="ffff">003a</tattr>
+        <tattr name="CTRL_REG0" type="hex" content="const" scope="task" min="0000" max="ffff">001e</tattr>
+        <tattr name="CTRL_REG1" type="hex" content="const" scope="task" min="0000" max="ffff">0020</tattr>
+        <tattr name="CTRL_REG2" type="hex" content="const" scope="task" min="0000" max="ffff">0021</tattr>
+        <tattr name="CTRL_REG3" type="hex" content="const" scope="task" min="0000" max="ffff">0022</tattr>
+        <tattr name="CTRL_REG4" type="hex" content="const" scope="task" min="0000" max="ffff">0023</tattr>
+        <tattr name="CTRL_REG5" type="hex" content="const" scope="task" min="0000" max="ffff">0024</tattr>
+        <tattr name="CTRL_REG6" type="hex" content="const" scope="task" min="0000" max="ffff">0025</tattr>
+        <tattr name="FIFO_CTRL_REG" type="hex" content="const" scope="task" min="0000" max="ffff">002e</tattr>
+        <tattr name="FIFO_READ_START" type="hex" content="const" scope="task" min="0000" max="ffff">0028</tattr>
+        <tattr name="FIFO_SRC_REG" type="hex" content="const" scope="task" min="0000" max="ffff">002f</tattr>
+        <tattr name="INT1_CFG" type="hex" content="const" scope="task" min="0000" max="ffff">0030</tattr>
+        <tattr name="INT1_DURATION" type="hex" content="const" scope="task" min="0000" max="ffff">0033</tattr>
+        <tattr name="INT1_SRC" type="hex" content="const" scope="task" min="0000" max="ffff">0031</tattr>
+        <tattr name="INT1_THS" type="hex" content="const" scope="task" min="0000" max="ffff">0032</tattr>
+        <tattr name="INT2_CFG" type="hex" content="const" scope="task" min="0000" max="ffff">0034</tattr>
+        <tattr name="INT2_DURATION" type="hex" content="const" scope="task" min="0000" max="ffff">0037</tattr>
+        <tattr name="INT2_SRC" type="hex" content="const" scope="task" min="0000" max="ffff">0035</tattr>
+        <tattr name="INT2_THS" type="hex" content="const" scope="task" min="0000" max="ffff">0036</tattr>
+        <tattr name="OUT_X_H" type="hex" content="const" scope="task" min="0000" max="ffff">0029</tattr>
+        <tattr name="OUT_Y_H" type="hex" content="const" scope="task" min="0000" max="ffff">002b</tattr>
+        <tattr name="OUT_Z_H" type="hex" content="const" scope="task" min="0000" max="ffff">002d</tattr>
+        <tattr name="REFERENCE" type="hex" content="const" scope="task" min="0000" max="ffff">0026</tattr>
+        <tattr name="STATUS_REG" type="hex" content="const" scope="task" min="0000" max="ffff">0027</tattr>
+        <tattr name="TIME_LATENCY" type="hex" content="const" scope="task" min="0000" max="ffff">003c</tattr>
+        <tattr name="TIME_LIMIT" type="hex" content="const" scope="task" min="0000" max="ffff">003b</tattr>
+        <tattr name="TIME_WINDOW" type="hex" content="const" scope="task" min="0000" max="ffff">003d</tattr>
+        <tattr name="cfg.higher" desc="notify when it reaches high" type="dec" content="struct" scope="task" min="0" max="65535">65535</tattr>
+        <tattr name="cfg.lower" desc="notify when it reaches low" type="dec" content="struct" scope="task" min="0" max="65535">0</tattr>
+        <tattr name="output.valueX" desc="shows X output  " type="dec" content="struct" scope="task" min="0" max="65535">0</tattr>
+        <tattr name="output.valueY" desc="shows Y output" type="dec" content="struct" scope="task" min="0" max="65535">0</tattr>
+        <tattr name="output.valueZ" desc="shows Z output" type="dec" content="struct" scope="task" min="0" max="65535">0</tattr>
+        <resource_ref name="ADC" enabled="0"/>
+        <resource_ref name="AON Domain Functionality" enabled="0"/>
+        <resource_ref name="Accumulator-Based Math" enabled="0"/>
+        <resource_ref name="Analog Open-Drain Pins" enabled="0"/>
+        <resource_ref name="Analog Open-Source Pins" enabled="0"/>
+        <resource_ref name="Analog Pins" enabled="0"/>
+        <resource_ref name="COMPA" enabled="0"/>
+        <resource_ref name="COMPA Event Trigger" enabled="0"/>
+        <resource_ref name="COMPB" enabled="0"/>
+        <resource_ref name="COMPB Event Trigger" enabled="0"/>
+        <resource_ref name="Delay Insertion" enabled="1"/>
+        <resource_ref name="Differential Output Pins" enabled="0"/>
+        <resource_ref name="Digital Input Pins" enabled="0"/>
+        <resource_ref name="Digital Open-Drain Pins" enabled="0"/>
+        <resource_ref name="Digital Open-Source Pins" enabled="0"/>
+        <resource_ref name="Digital Output Pins" enabled="0"/>
+        <resource_ref name="Dynamic Power Control" enabled="0"/>
+        <resource_ref name="GPIO Event Trigger" enabled="0"/>
+        <resource_ref name="I2C Master" enabled="1">
+            <rattr name="SCL frequency">1</rattr>
+            <rattr name="SCL stretch timeout">4</rattr>
+            <io_usage>
+                <uattr name="SCL pin/0000">DIO10</uattr>
+                <uattr name="SDA pin/0000">DIO9</uattr>
+            </io_usage>
+        </resource_ref>
+        <resource_ref name="ISRC" enabled="0"/>
+        <resource_ref name="Math and Logic" enabled="0"/>
+        <resource_ref name="Multi-Buffered Output Data Exchange" enabled="0">
+            <rattr name="Buffer count">2</rattr>
+            <rattr name="Indicate overflow at buffer check">1</rattr>
+            <rattr name="Indicate overflow at buffer switch">0</rattr>
+            <rattr name="Prevent overflow at buffer switch">1</rattr>
+        </resource_ref>
+        <resource_ref name="Peripheral Sharing" enabled="0"/>
+        <resource_ref name="Pulse Counter" enabled="0"/>
+        <resource_ref name="RTC Multi-Event Capture" enabled="0"/>
+        <resource_ref name="RTC-Based Execution Scheduling" enabled="1"/>
+        <resource_ref name="Reference DAC" enabled="0"/>
+        <resource_ref name="Run-Time Logging" enabled="0"/>
+        <resource_ref name="SPI Chip Select" enabled="0"/>
+        <resource_ref name="SPI Data Transfer" enabled="0">
+            <rattr name="Bit rate">0</rattr>
+            <rattr name="MISO configuration when inactive">-1</rattr>
+            <rattr name="MOSI configuration on initialization">0</rattr>
+            <rattr name="MOSI configuration on uninitialization">0</rattr>
+            <rattr name="SCLK configuration on initialization">0</rattr>
+            <rattr name="SCLK configuration on uninitialization">0</rattr>
+            <io_usage>
+                <uattr name="MISO pin/0000"></uattr>
+                <uattr name="MOSI pin/0000"></uattr>
+                <uattr name="SCLK pin/0000"></uattr>
+            </io_usage>
+        </resource_ref>
+        <resource_ref name="Signal Observation" enabled="0"/>
+        <resource_ref name="System CPU Alert" enabled="1"/>
+        <resource_ref name="System Event Trigger" enabled="0"/>
+        <resource_ref name="TDC" enabled="0"/>
+        <resource_ref name="Timer 0" enabled="0"/>
+        <resource_ref name="Timer 0 Event Trigger" enabled="0"/>
+        <resource_ref name="Timer 1" enabled="0"/>
+        <resource_ref name="Timer 1 Event Trigger" enabled="1"/>
+        <resource_ref name="Timer 2" enabled="0"/>
+        <resource_ref name="Timer 2 Event Trigger" enabled="0"/>
+        <resource_ref name="UART Emulator" enabled="0">
+            <rattr name="RX buffer size">64</rattr>
+            <rattr name="Required idle period before enabling RX">11</rattr>
+            <rattr name="TX buffer size">64</rattr>
+            <io_usage>
+                <uattr name="RX pin/0000"></uattr>
+                <uattr name="TX pin/0000"></uattr>
+            </io_usage>
+        </resource_ref>
+        <sccode name="event0" init_power_mode="0"><![CDATA[]]></sccode>
+        <sccode name="event1" init_power_mode="0"><![CDATA[]]></sccode>
+        <sccode name="event2" init_power_mode="0"><![CDATA[]]></sccode>
+        <sccode name="event3" init_power_mode="0"><![CDATA[]]></sccode>
+        <sccode name="execute" init_power_mode="0"><![CDATA[i2cStart();
+i2cTx(ACC_I2C_ADDR_W);         /////Slave address with write option
+if(state.i2cStatus == 0x0000){
+i2cTx(CTRL_REG0);
+i2cTx(0x10);
+i2cStop();
+}else{
+output.valueX=10;
+i2cStop();
+}
+fwDelayInstrCycles(50);
+
+
+i2cStart();
+i2cTx(ACC_I2C_ADDR_W);
+i2cTx(CTRL_REG0);
+if(state.i2cStatus == 0x0000) {
+    i2cRepeatedStart();
+    i2cTx(ACC_I2C_ADDR_R);
+    i2cRxAck(output.valueX);
+    i2cStop();
+}else{
+    i2cStop();
+}
+fwScheduleTask(1);]]></sccode>
+        <sccode name="initialize" init_power_mode="0"><![CDATA[fwScheduleTask(1);]]></sccode>
+        <sccode name="terminate" init_power_mode="0"><![CDATA[]]></sccode>
+        <event_trigger active_count="1">0,1,2,3</event_trigger>
+        <tt_iter>run_execute</tt_iter>
+        <tt_struct></tt_struct>
+        <rtl_struct></rtl_struct>
+        <rtl_task_sel en="1" struct_log_list="output"/>
+    </task>
+</project>
